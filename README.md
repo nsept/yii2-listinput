@@ -11,13 +11,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-composer require --prefer-dist nsept/yii2-listinput "@dev"
+composer require --prefer-dist nsept/yii2-listinput "*"
 ```
 
 or add
 
 ```
-"nsept/yii2-listinput": "@dev"
+"nsept/yii2-listinput": "*"
 ```
 
 to the require section of your `composer.json` file.
