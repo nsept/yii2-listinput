@@ -1,6 +1,8 @@
 Yii2-ListInput
 ==============
 
+![example](https://s32.postimg.org/mtfuy0fmd/listinput.jpg)
+
 A Yii2 input widget extension for manage lists.
 
 Installation
