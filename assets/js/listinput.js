@@ -13,7 +13,6 @@
 
         try {
             val = JSON.parse(this.element.val());
-            console.log(val);
         } catch (e) {
 
         }
@@ -22,7 +21,7 @@
             this.refreshGroups();
         } else {
             $.each(val, function () {
-                base.addControl(false, String(this));
+                base.addControl(false, this);
             });
         }
 
