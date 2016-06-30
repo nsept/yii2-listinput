@@ -13,6 +13,7 @@
 
         try {
             val = JSON.parse(this.element.val());
+            console.log(val);
         } catch (e) {
 
         }
@@ -21,7 +22,7 @@
             this.refreshGroups();
         } else {
             $.each(val, function () {
-                base.addControl(false, this);
+                base.addControl(false, String(this));
             });
         }
 
@@ -49,7 +50,7 @@
 
         var group = $('<li class="listinput-group" style="margin-top: 1px;">');
         var inputGroup = $('<div class="input-group">');
-        var input = $('<input type="text" class="form-control listinput-input" value="' + '' + value + '">');
+        var input = $('<input type="text" class="form-control listinput-input">').val(value);
 
         var buttonWrap = $('<span class="input-group-btn">');
         var removeButton = $('<button class="btn btn-default listinput-button listinput-remove-button" type="button"><span class="glyphicon glyphicon-minus"></span></button>');
@@ -131,7 +132,8 @@
                 data[data.length] = $(this).val();
             }
         });
-        this.element.val(JSON.stringify(data));
+        var val = JSON.stringify(data);
+        this.element.val(val);
         if (this.element.val() == '[""]' || this.element.val() == '[]') {
             this.element.val('');
         }
